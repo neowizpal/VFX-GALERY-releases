@@ -1,5 +1,5 @@
 # VFX Gallery
-![v1.5.12](https://img.shields.io/badge/version-1.5.12-brightgreen)
+![v1.5.13](https://img.shields.io/badge/version-1.5.13-brightgreen)
 
 Десктопный инструмент для управления видео-референсами.
 Просматривайте, тегируйте и организуйте видеоколлекции прямо в браузере — без облака.
