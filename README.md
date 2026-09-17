@@ -34,5 +34,5 @@
 
 - Windows 10 / 11
 - Отдельно ставить Python, `.bat` launcher или WebView2 **не** нужно (Electron + bundled ffmpeg/yt-dlp)
-- Для Artstation Cloudflare: системный Chrome/Edge **или** optional Chromium asset (не в default zip)
+- Для Artstation Cloudflare: установленный Google Chrome или Microsoft Edge
 - Доступ в интернет (только для обновлений и скачивания видео)
