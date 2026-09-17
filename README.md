@@ -1,5 +1,5 @@
 # VFX Gallery
-![v1.17.1](https://img.shields.io/badge/version-1.17.1-brightgreen)
+![v1.17.2](https://img.shields.io/badge/version-1.17.2-brightgreen)
 
 Десктопный инструмент для управления видео-референсами.
 Просматривайте, тегируйте и организуйте видеоколлекции в приложении Windows — без облака и без браузера.
@@ -14,17 +14,20 @@
 
 ## Установка
 
-1. Скачайте `VFX-Gallery-<версия>-windows-portable.exe` из раздела [Releases](../../releases) — **это основной клиентский install**
-2. Запустите двойным кликом (Python и `.bat` не нужны)
-3. При первом запуске выберите папку с видео в окне приложения
+1. Скачайте `VFX-Gallery-<версия>-windows-dir.zip` из раздела [Releases](../../releases) — **это основной клиентский install**
+2. Распакуйте zip в любую папку
+3. Запустите `VFX Gallery.exe` внутри папки (Python и `.bat` не нужны)
+4. При первом запуске выберите папку с видео в окне приложения
 
-Zip `VFX-Gallery-*.zip` в Assets — **не** обычная установка (secondary: MIR / legacy in-app update). Не распаковывайте zip и не запускайте `run.bat` как клиентский путь.
+Рядом с exe: `config/`, `logs/`, `resources/` — логи и конфиги видны в папке установки.
+
+Zip `VFX-Gallery-v*.zip` (без `-windows-dir`) в Assets — **не** обычная установка (secondary: MIR / legacy). Не запускайте `run.bat` как клиентский путь.
 
 ## Обновление с предыдущих версий
 
-Библиотека видео, `.vfxgallery` и `config.local.json` сохраняют формат. Меняется только запуск: одно окно приложения Windows вместо старого запуска через браузер.
+Библиотека видео, `.vfxgallery` и `config.local.json` сохраняют формат. Меняется только запуск: папка с exe вместо монолитного portable.
 
-- Обновитесь через in-app update **или** скачайте новый portable exe (не удаляйте `config/` и папку видео).
+- Обновитесь через in-app update **или** скачайте новый `*-windows-dir.zip`, распакуйте поверх/рядом (не удаляйте `config/` и папку видео).
 - Если папка не запрашивается — галерея откроется с теми же роликами (те же hash).
 - Если запрашивается — укажите ту же папку видео, что раньше.
 - Старые ключи LAN / `--public` / пароль в config игнорируются и не ломают запуск.
@@ -32,6 +35,6 @@ Zip `VFX-Gallery-*.zip` в Assets — **не** обычная установка
 ## Требования
 
 - Windows 10 / 11
-- Отдельно ставить Python, `.bat` launcher, WebView2 или Chrome/Edge **не** нужно (Electron + bundled tools, включая Playwright Chromium для Artstation)
-- Размер portable больше из‑за встроенного Chromium (~150–450 МБ) — ожидаемо
+- Отдельно ставить Python, `.bat` launcher или WebView2 **не** нужно (Electron + bundled ffmpeg/yt-dlp)
+- Для Artstation Cloudflare: системный Chrome/Edge **или** optional Chromium asset (не в default zip)
 - Доступ в интернет (только для обновлений и скачивания видео)
