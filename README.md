@@ -1,5 +1,5 @@
 # VFX Gallery
-![v1.16.1](https://img.shields.io/badge/version-1.16.1-brightgreen)
+![v1.17.0](https://img.shields.io/badge/version-1.17.0-brightgreen)
 
 Десктопный инструмент для управления видео-референсами.
 Просматривайте, тегируйте и организуйте видеоколлекции в приложении Windows — без облака и без браузера.
@@ -30,5 +30,6 @@
 ## Требования
 
 - Windows 10 / 11
-- Отдельно ставить Python, `.bat` launcher или WebView2 **не** нужно (Electron + bundled tools)
+- Отдельно ставить Python, `.bat` launcher, WebView2 или Chrome/Edge **не** нужно (Electron + bundled tools, включая Playwright Chromium для Artstation)
+- Размер portable больше из‑за встроенного Chromium (~150–450 МБ) — ожидаемо
 - Доступ в интернет (только для обновлений и скачивания видео)
